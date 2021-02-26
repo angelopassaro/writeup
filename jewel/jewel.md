@@ -11,7 +11,7 @@ Jewel is a Linux machine. The ip of the box is 10.10.10.211.
 
 # Recon
 
-I starting with *nmap* scan `nmap -sC -Sv -oA nmap/cache 10.10.10.211`
+I starting with *nmap* scan `nmap -sC -Sv -oA nmap/laboratory 10.10.10.211`
 
 <img src="./img/nmap.png"  width="650"/>
 
