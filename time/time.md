@@ -20,7 +20,7 @@ And i found:
 - *ssh*
 - *webserver apache*
 
-On the webserver there is a beautifier and validator
+On the webserver there is a beautifier and validator for `json`
 <img src="./img/home.png"  width="650"/>
 
 So i tried some input and got a error message for valiadator
