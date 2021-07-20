@@ -18,7 +18,7 @@ I starting with *nmap* scan `nmap -sC -Sv -oA nmap/tenet 10.10.10.223`
 
 And I found two services:
 - *ssh*
-- *webserver nginx*
+- *webserver apache*
 
 On webserver there is default apache page
 
