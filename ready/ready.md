@@ -86,7 +86,7 @@ So now i can navigate on entire filesystem and can take the root flag.
 
 <img src="./img/rootflag.png"  width="650"/>
 
-##Bouns - SSH
+### Bouns - SSH
 For full root priv can add the ssh key in the `root/.ssh`
 
 - Generate the pair of key
