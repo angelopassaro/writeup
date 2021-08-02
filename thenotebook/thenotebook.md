@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Notebook
+title: TheNotebook
 permalink: /writeup/thenotebook/
 lang: en
 ---

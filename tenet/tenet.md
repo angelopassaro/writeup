@@ -201,13 +201,11 @@ done
 ```
 So i started the script and later i executed `enableSSH.sh`
 
-<img src="./img/addkey.png"  width="650"/>
-
 And now can login as `root` with ssh.
 
-and grab the flag
+<img src="./img/addkey.png"  width="650"/>
 
-<img src="./img/rootflag.png"  width="650"/>
+and grab the root flag.
 
 
 
