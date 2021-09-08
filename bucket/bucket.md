@@ -151,7 +151,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
         }                                                                                      
 }         
 ```
-The `pd4ml` is a tool for convert html in pdf and there is a [vulnerability](https://twitter.com/akhilreni_hs/status/1219666714033414144) with `<pd4ml:attachment>` tag for exploit this vulnerability need to create the table `alerts` in `dynamodb` and call the `index.php` page. For create table i write a script for grab ssh key and used in the dynamodb shell on `http://s3.bucket.htb/shell/`.
+The `pd4ml` is a tool for convert html in pdf and there is a [vulnerability](https://twitter.com/akhilreni_hs/status/1219666714033414144) with `<pd4ml:attachment>` tag, for exploit this vulnerability i need to create the table `alerts` in `dynamodb` and call the `index.php` page. For exploit the vul i used the following script (Create table and grab the ssh key). 
 
 
 ```js
