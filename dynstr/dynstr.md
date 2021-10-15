@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dynstr
-permalink: /writeup/Dynstr/
+permalink: /writeup/dynstr/
 lang: en
 ---
 
